@@ -6,6 +6,7 @@
     <title>Home Page</title>
 
     <link rel="stylesheet" href="../styles/style.css">
+    <script src="../scripts/script.js" defer></script>
 <body>  
     <header class="container-nav">
             <a href="index.html" class="logo">INILOGO</a>
@@ -93,5 +94,6 @@
     <br>
 
 </body>
+
 
 </html>
