@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <script src="../scripts/script.js" defer></script>
 <body>  
     <header class="container-nav">
             <a href="index.html" class="logo">INILOGO</a>
@@ -93,5 +94,6 @@
     <br>
 
 </body>
+
 
 </html>

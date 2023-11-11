@@ -6,7 +6,7 @@
     <title>PASIEN</title>
 
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../styles/style.css">
 </head>
 
 
@@ -26,21 +26,21 @@
     <div class="pasien">
         <a href="pasien1.html" class="box-pasien">
             Pasien 1
-            <img src="tuhanalek.jpg" width="200px" height="200px"
+            <img src="../assets/tuhanalek.jpg" width="200px" height="200px"
         class="foto-pasien">
         </a>
         <a href="pasien1.html" class="box-pasien">
             Pasien 2
-            <img src="tuhanalek.jpg" width="200px" height="200px"
+            <img src="../assets/tuhanalek.jpg" width="200px" height="200px"
         class="foto-pasien">
         <a href="pasien1.html" class="box-pasien">
             Pasien 3
-            <img src="tuhanalek.jpg" width="200px" height="200px"
+            <img src="../assets/tuhanalek.jpg" width="200px" height="200px"
         class="foto-pasien">
         
         <div class="add-pasien">
             Add Patient
-            <img src="plus-regular-60.png" class="logo-plus" width="170px" height="170px">
+            <img src="../assets/plus-regular-60.png" class="logo-plus" width="170px" height="170px">
         </div>
     </div>
 </div>
