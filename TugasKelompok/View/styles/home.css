@@ -1,0 +1,70 @@
+body{
+    font-family:'Poppins', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 5%;
+    padding: 0;    
+    background-color: #BBDCD3;
+}
+
+.content {
+    text-align: center;
+}
+
+.patient {
+    margin: 5%;
+    padding: 2%;
+}
+
+.schedule {
+    margin: 0%;
+    padding: 0%;
+}
+
+h1 {
+    font-weight: bold;
+    /* font-size: 2rem; */
+}
+
+p {
+    font-weight: 500; /* medium */
+    font-size: 1rem;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #4B72C2;
+    color: #FCFBF9;
+    font-size: 12px;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    border-radius: 50px;
+    border: none;
+}
+
+.star1 {
+    position: absolute;
+    top: 50px;
+    left: 1000px;
+    width: 50px;
+}
+
+.star2 {
+    position: absolute;
+    top: 200px;
+    left: 550px;
+    width: 20px;
+}
+
+.star3 {
+    position: absolute;
+    top: 405px;
+    left: 700px;
+    width: 20px;
+}
+
+.star4 {
+    position: absolute;
+    top: 400px;
+    left: 300px;
+    width: 70px;
+}

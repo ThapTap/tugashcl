@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    color: #230F12;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(medicalbackground.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+button a {
+    text-decoration: none;
+}
+
+/* NAVIGATION BAR  */
+/* NAVIGATION BAR  */
+/* NAVIGATION BAR  */
+/* NAVIGATION BAR  */
+/* NAVIGATION BAR  */
+/* NAVIGATION BAR  */
+/* NAVIGATION BAR  */
+/* NAVIGATION BAR  */
+/* NAVIGATION BAR  */
+/* NAVIGATION BAR  */
+
+.container-nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid;
+    background-color: #72d4cb;
+}
+
+.logo {
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.logout {
+    position: relative;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.logout::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    height: 2px;
+    width: 0;
+    background: #230F12;
+    border-radius: 50px;
+    transition: width .3s ease;
+}
+
+.logout:hover::before {
+    width: 100%;
+}
+
+.navbar a{
+    position: relative;
+    margin-left: 40px;
+    text-decoration: none;
+}
+
+.navbar a::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    height: 2px;
+    width: 0;
+    background: #230F12;
+    border-radius: 50px;
+    transition: width .3s ease;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+/* LOGIN PAGE */
+/* LOGIN PAGE */
+/* LOGIN PAGE */
+/* LOGIN PAGE */
+/* LOGIN PAGE */
+/* LOGIN PAGE */
+/* LOGIN PAGE */
+/* LOGIN PAGE */
+/* LOGIN PAGE */
+/* LOGIN PAGE */
+
+.login-form {
+    width: 420px;
+    color: #230F12;
+    border-radius: 20px;
+    padding: 30px 40px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+}
+
+.login-form h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.login-form .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #230F12;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder {
+    color: #230F12;
+}
+
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.login-form .remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+}
+
+.remember-forgot label input {
+    accent-color: #ffff;
+    margin-right: 3px;
+}
+
+.remember-forgot a {
+    color: #230F12;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.login-form .btn {
+    width: 100%;
+    height: 45px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: teal;
+    font-weight: 600;
+}
+
+.login-form .register {
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.register p a {
+    color: #230F12;
+    font-weight: 600;
+}
+
+.register a {
+    text-decoration: none;
+}
+
+.register p a:hover {
+    text-decoration: underline;
+}
+
+/* PASIEN PAGE */
+/* PASIEN PAGE */
+/* PASIEN PAGE */
+/* PASIEN PAGE */
+/* PASIEN PAGE */
+/* PASIEN PAGE */
+/* PASIEN PAGE */
+/* PASIEN PAGE */
+/* PASIEN PAGE */
+/* PASIEN PAGE */
+
+.add-pasien {
+    border: 2px solid;
+    width: 200px;
+    height: 200px;
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-pasien {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    text-decoration: none;
+}
+
+.container-pasien {
+    width: 70%;
+    height: 500px;
+    margin: 150px 0px;
+    position: absolute;
+}
+
+.foto-pasien {
+    margin: 20px;
+    box-shadow: 2px 2px 10px 1px;
+
+    transition: 0.3s;
+}
+
+.foto-pasien:hover {
+    transform: scale(1.1);
+}
+
+.logo-plus {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pasien {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-decoration: none;
+}
+
+.profil-pasien {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 10px;
+    border: 2px solid;
+}
