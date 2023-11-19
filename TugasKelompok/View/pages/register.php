@@ -48,6 +48,41 @@
                     array_push($errors, "Password doest not match");
                 }
 
+                require_once "../Utils/connection.php";
+                
+                // Check if the username already exists
+                $queryUsername = "SELECT * FROM doctor WHERE username = ?";
+                $stmtUsername = $conn->prepare($queryUsername);
+                $stmtUsername->bind_param("s", $username);
+                $stmtUsername->execute();
+                $resultUsername = $stmtUsername->get_result();
+                if ($resultUsername->num_rows > 0) {
+                    array_push($errors, "Username is already taken.");
+                }
+                $stmtUsername->close();
+
+                // Check if the email already exists
+                $queryEmail = "SELECT * FROM doctor WHERE DocEmail = ?";
+                $stmtEmail = $conn->prepare($queryEmail);
+                $stmtEmail->bind_param("s", $email);
+                $stmtEmail->execute();
+                $resultEmail = $stmtEmail->get_result();
+                if ($resultEmail->num_rows > 0) {
+                    array_push($errors, "An account with this email already exists.");
+                }
+                $stmtEmail->close();
+
+                // Check if the phone number already exists
+                $queryPhone = "SELECT * FROM doctor WHERE DocPhoneNumber = ?";
+                $stmtPhone = $conn->prepare($queryPhone);
+                $stmtPhone->bind_param("s", $phone);
+                $stmtPhone->execute();
+                $resultPhone = $stmtPhone->get_result();
+                if ($resultPhone->num_rows > 0) {
+                    array_push($errors, "An account with this phone number already exists.");
+                }
+                $stmtPhone->close();
+
                 if (count($errors) > 0){
                     foreach($errors as $error) {
                         echo "<div class='alert alert-danger'>$error</div>";

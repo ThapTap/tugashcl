@@ -3,10 +3,10 @@
     $server = '127.0.0.1';
     $user = 'root';
     $pass = '';
-    $database = 'medilogdb';
+    $dbname = 'medilogdb';
 
     // Attempt to establish a connection
-    $conn = mysqli_connect($server, $user, $pass, $database);
+    $conn = mysqli_connect($server, $user, $pass, $dbname);
 
     // Check connection
     if (!$conn) {
