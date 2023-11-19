@@ -1,23 +1,26 @@
+<?php
+    require "./logincheck.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- STYLES -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/navbar.css">   
     <link rel="stylesheet" href="../styles/home.css">
     <title>Home Page</title>
 </head>
 <body>
     <!-- NAVBAR -->
     <!-- placeholder !!!!! -->
-    <nav>
-        <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="#">Patients</a></li>
-            <li><a href="#">Schedule</a></li>
-        </ul>
-    </nav>
+    <?php
+    require "./navbar.php";
+    ?>
 
-    <div class="content">
+    <div class="content" style="margin-top: 90.71px;">
         <img src="../assets/soft-star.png" class="star1">
         <div class="patient">
             <h1 id="welcome"></h1>
@@ -37,14 +40,15 @@
     <!-- FOOTER -->
     <!-- placeholder !!!!! -->
     <footer>
-        &copy; 2023 Medi Healthcare
+        <div class="footer">
+            <span>&copy; 2023 Medi Healthcare</span>
+        </div>
     </footer>
 
 
     <!-- placeholder !!!!! code buat show nama dokternya -->
     <script>
-        var userName = "Edard Sontase";
-        document.getElementById("welcome").innerText = "Hi, " + userName + "! Welcome to MediLog";
+        document.getElementById("welcome").innerText = "Hi! Welcome to MediLog";
     </script>
 </body>
 </html>

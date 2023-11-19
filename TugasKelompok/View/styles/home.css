@@ -1,3 +1,10 @@
+:root{
+    --ijo-tua: #96BCB4;
+    --ijo-muda: #BBDCD3;
+    --biru-link: #4B72C2;
+    --sky-blue: #C9E7F2;
+}
+
 body{
     font-family:'Poppins', Tahoma, Geneva, Verdana, sans-serif;
     margin: 5%;
@@ -43,22 +50,22 @@ button {
 
 .star1 {
     position: absolute;
-    top: 50px;
-    left: 1000px;
+    top: 140px;
+    left: 1200px;
     width: 50px;
 }
 
 .star2 {
     position: absolute;
-    top: 200px;
-    left: 550px;
+    top: 290px;
+    left: 670px;
     width: 20px;
 }
 
 .star3 {
     position: absolute;
-    top: 405px;
-    left: 700px;
+    top: 520px;
+    left: 840px;
     width: 20px;
 }
 

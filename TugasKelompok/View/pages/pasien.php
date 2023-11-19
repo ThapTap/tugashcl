@@ -1,3 +1,7 @@
+<?php
+    require "./logincheck.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,12 +10,18 @@
     <title>PASIEN</title>
 
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- STYLES -->
     <link rel="stylesheet" href="../styles/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/navbar.css">  
 </head>
 
 
 <body>
-    <header class="container-nav">
+    <?php
+        require "./navbar.php";
+    ?>
+    <!-- <header class="container-nav">
             <a href="index.html" class="logo">INILOGO</a>
         <nav class="navbar">
             <a href="index.html">HOME PAGE</a>
@@ -20,7 +30,7 @@
             <a href="#">OBAT</a>
         </nav>
             <a class="logout" href="loginpage.html">LOG OUT</a>
-    </header>
+    </header> -->
 
 <div class="container-pasien">
     <div class="pasien">

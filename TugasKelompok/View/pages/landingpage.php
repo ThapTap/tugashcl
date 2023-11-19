@@ -51,7 +51,7 @@
                     <img src="../assets/soft-star.png" alt="" class="soft-star1">
                     <img src="../assets/soft-star.png" alt="" class="soft-star2">
                     <img src="../assets/medilog-high-resolution-logo-black-transparent.png" alt="" class="img-logo">
-                    <a class="try-now-btn btn mb-5 m-3 px-5 py-3 rounded-pill fs-5" href="#" role="button">Try it now!</a>
+                    <a class="try-now-btn btn mb-5 m-3 px-5 py-3 rounded-pill fs-5" href="./loginpage.php" role="button">Try it now!</a>
                 </div>
             </div>
         </div>
@@ -68,7 +68,7 @@
             <div class="about-us-text">
                 <h1 id="abt-us-h1">About Us</h1>
                 <p id="abt-us-p">Elevate your medical practice with MediLog! Say farewell to record-keeping hassles and data disarray. Access patient information with ease, empowering you to make informed healthcare decisions. Embrace the future of medical management, so you can focus on providing top-notch patient care.</p>
-                <a id="abt-us-a" href="#">Try it now! <iconify-icon icon="lucide:arrow-right"></iconify-icon></a>
+                <a id="abt-us-a" href="./loginpage.php">Try it now! <iconify-icon icon="lucide:arrow-right"></iconify-icon></a>
             </div>
             <div class="doctor-img-wrapper">
                 <img src="../assets/Group 10061.png" alt="" class="doctor-img">
