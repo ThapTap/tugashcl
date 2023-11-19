@@ -70,6 +70,4 @@
 
 <link rel="stylesheet" href="../styles/loginpage.css">
 </body>
-
-
 </html>
