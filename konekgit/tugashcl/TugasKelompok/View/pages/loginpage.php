@@ -70,29 +70,33 @@
 <img src="../assets/medilog-high-resolution-logo-black-transparent.png" class="img-logo" alt="">
 
   <div class="login-form">
-      <form action="" method="POST">
+      <form action="../script/loginScript.php" method="POST">
 
           <div class="register">
-              <p>Don't have an account yet?</p>
-              <a href="#">Sign Up Here!</a>
+            <p>Don't have an account yet?</p>
+            <a href="#">Sign Up Here!</a>
           </div>
 
           <div class="input-box">
-              <input type="text" placeholder="Username" required>
+              <input type="text" placeholder="Username" name="username" required>
               <!-- <i class='bx bxs-user'></i> -->
           </div>
 
           <div class="input-box">
-              <input type="password" placeholder="Password" required>
+              <input type="password" placeholder="Password" name="password" required>
               <!-- <i class='bx bxs-lock-alt' ></i> -->
           </div>
 
           <div class="remember-forgot">
             <a href="#"> Forgot Password?</a>
-
           </div>
 
-            <a href="#" class="btn-login">Login</a>
+          <div class="btn-submit">
+            <label for="login"></label>
+            <input type="submit" name="login">
+          </div>
+
+            <!-- <a href="#" class="btn-login">Login</a> -->
 
       </form>
   </div>
