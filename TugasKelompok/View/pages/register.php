@@ -32,6 +32,10 @@
                     array_push($errors, "All fields are required");
                 }
 
+                if (!is_numeric($phone)){
+                    array_push($errors, "Phone number must be numerical!");
+                }
+
                 if (!filter_var ($email, FILTER_VALIDATE_EMAIL)) {
                     array_push($errors, "Email is not valid");
                 }
