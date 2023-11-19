@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Left section styles */
+.left-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #96BCB4;
+    color: black;
+    padding-bottom: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+    width: 50%;
+}
+
+.left-section .left-image {
+    max-width: 100%; /* ensures the image is responsive and fits the container */
+    height: auto; /* maintains the aspect ratio */
+    margin-bottom: 20px; /* adds some space between the image and the text below */
+}
+
+.left-section h1 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+}
+
+.left-section p {
+    font-size: 1.2em;
+}
+
+/* Right section styles */
+.right-section {
+    padding: 50px;
+    width: 50%;
+    background-color: #BBDCD3;
+}
+
+.right-section h2 {
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.terms {
+    display: flex;
+    align-items: center;
+}
+
+.terms label {
+    display: inline-block;
+    margin-left: 5px;
+    margin-top: 4px;
+}
+
+.terms input[type="checkbox"] {
+    margin-top: 0; /* Adjust as needed */
+}
+
+.form-group input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 10px;
+    background-color: #34a5cf;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #2993b1;
+}
+
+.signin-redirect {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.signin-redirect a {
+    color: #34a5cf;
+    text-decoration: none;
+}
+
+.signin-redirect a:hover {
+    text-decoration: underline;
+}
+
+.alert {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+.alert-danger {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
