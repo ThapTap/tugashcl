@@ -75,33 +75,33 @@
             <h2>Set Up Your Account</h2>
             <form class="register-container" action="register.php" method="post">
                 <div class="form-group">
-                    <label for="fullName"> Full Name*</label>
-                    <input type="text" name="fullName" id="fullName" placeholder="Enter Your Full Name">
+                    <label for="fullName">Full Name*</label>
+                    <input type="text" name="fullName" id="fullName" placeholder="Enter Your Full Name" value="<?php echo isset($_POST['fullName']) ? htmlspecialchars($_POST['fullName']) : ''; ?>">
                 </div>
 
                 <div class="form-group">
                     <label for="username">Username*</label>
-                    <input type="text" name="username" id="username" placeholder="Enter your username">
+                    <input type="text" name="username" id="username" placeholder="Enter your username" value="<?php echo isset($_POST['username']) ? htmlspecialchars($_POST['username']) : ''; ?>">
                 </div>
 
                 <div class="form-group">
                     <label for="phone">Phone Number*</label>
-                    <input type="tel" name="phone" id="phone" placeholder="Enter your phone number">
+                    <input type="tel" name="phone" id="phone" placeholder="Enter your phone number" value="<?php echo isset($_POST['phone']) ? htmlspecialchars($_POST['phone']) : ''; ?>">
                 </div>
 
                 <div class="form-group">
                     <label for="email">Email*</label>
-                    <input type="email" name="email" id="email" placeholder="Enter your email">
+                    <input type="email" name="email" id="email" placeholder="Enter your email" value="<?php echo isset($_POST['email']) ? htmlspecialchars($_POST['email']) : ''; ?>">
                 </div>
 
                 <div class="form-group">
                     <label for="password">Password*</label>
-                    <input type="password" name="password" id="password" placeholder="Enter your password">
+                    <input type="password" name="password" id="password" placeholder="Enter your password" value="<?php echo isset($_POST['password']) ? htmlspecialchars($_POST['password']) : ''; ?>">
                 </div>
 
                 <div class="form-group">
                     <label for="confirmPassword">Confirm Password*</label>
-                    <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm your password">
+                    <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm your password" value="<?php echo isset($_POST['confirmPassword']) ? htmlspecialchars($_POST['confirmPassword']) : ''; ?>">
                 </div>
 
                 <div class="form-group terms">
