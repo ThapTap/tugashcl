@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 18, 2023 at 06:29 PM
+-- Generation Time: Nov 19, 2023 at 04:31 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -33,7 +33,7 @@ CREATE TABLE `doctor` (
   `specialization` varchar(255) DEFAULT NULL,
   `DocPhoneNumber` varchar(15) DEFAULT NULL,
   `username` varchar(50) DEFAULT NULL,
-  `password` varbinary(256) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
   `DocEmail` varchar(255) DEFAULT NULL,
   `Patients_ID` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
