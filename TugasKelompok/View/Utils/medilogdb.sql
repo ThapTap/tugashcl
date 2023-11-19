@@ -27,16 +27,18 @@ SET time_zone = "+00:00";
 -- Table structure for table `doctor`
 --
 
-CREATE TABLE `doctor` (
-  `ID` int(11) NOT NULL,
-  `DocName` varchar(255) DEFAULT NULL,
-  `specialization` varchar(255) DEFAULT NULL,
-  `DocPhoneNumber` varchar(15) DEFAULT NULL,
-  `username` varchar(50) DEFAULT NULL,
-  `password` varchar(255) DEFAULT NULL,
-  `DocEmail` varchar(255) DEFAULT NULL,
-  `Patients_ID` int(11) DEFAULT NULL
+CREATE TABLE doctor (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `DocName` varchar(255) NOT NULL,
+  `specialization` varchar(255) NOT NULL,
+  `DocPhoneNumber` varchar(15) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `password` VARBINARY(256) NOT NULL,
+  `DocEmail` varchar(255) NOT NULL,
+  `Patients_ID` int(11) NOT NULL,
+  PRIMARY KEY (ID)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 
 -- --------------------------------------------------------
 
