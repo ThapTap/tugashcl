@@ -1,11 +1,3 @@
-<?php
-    if (isset($_POST['logout'])) {
-        session_destroy();
-        header("Location: loginpage.php");
-        exit();
-    }
-?>
-
 <nav class="navbar navbar-expand-lg bg-body-tertiary p-0">
     <div class="container-fluid p-1 navbar-wrapper">
         <div class="img-logo-wrapper me-5">
@@ -26,8 +18,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Schedule</a>
                 </li>
-                <form action="POST" method="navbar.php">
-                    <!-- <button type="submit" name="logout" class="btn btn-outline-success m-0 logout-btn">Logout</button> -->
+                <form action="logout.php" method="POST">
                     <input type="submit" class="btn btn-outline-success m-0 logout-btn" value="Log out" name="logout">
                 </form>
             </ul>
