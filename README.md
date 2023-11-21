@@ -1,2 +1,2 @@
 # tugashcl
-tugas human computer interation
+Tugas SecProg + HCI
