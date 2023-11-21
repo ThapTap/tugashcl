@@ -32,6 +32,14 @@
                     array_push($errors, "All fields are required");
                 }
 
+                if (!preg_match('/^[a-zA-Z ]+$/', $fullName)) {
+                    array_push($errors, "Full Name can only contain letters.");
+                }
+
+                if (!preg_match('/^[a-zA-Z0-9]+$/', $username)) {
+                    array_push($errors, "Username can only contain letters and numbers.");
+                }
+
                 if (!is_numeric($phone)){
                     array_push($errors, "Phone number must be numerical!");
                 }
