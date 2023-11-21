@@ -32,7 +32,7 @@
                     array_push($errors, "All fields are required");
                 }
 
-                if (!preg_match('/^[a-zA-Z]+$/', $fullName)) {
+                if (!preg_match('/^[a-zA-Z ]+$/', $fullName)) {
                     array_push($errors, "Full Name can only contain letters.");
                 }
 
