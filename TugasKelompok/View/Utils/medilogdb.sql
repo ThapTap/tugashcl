@@ -28,14 +28,15 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `doctor` (
-  `ID` int(11) NOT NULL,
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
   `DocName` varchar(255) DEFAULT NULL,
   `specialization` varchar(255) DEFAULT NULL,
   `DocPhoneNumber` varchar(15) DEFAULT NULL,
   `username` varchar(50) DEFAULT NULL,
-  `password` varbinary(256) DEFAULT NULL,
+  `password` VARBINARY(256) DEFAULT NULL,
   `DocEmail` varchar(255) DEFAULT NULL,
-  `Patients_ID` int(11) DEFAULT NULL
+  `Patients_ID` int(11) DEFAULT NULL,
+  PRIMARY KEY (ID)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
