@@ -6,46 +6,47 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    // Prepare the SQL statement to select the user based on the username
+    if (!preg_match('/^[a-zA-Z0-9]+$/', $username)) {
+        $_SESSION["error_message"] = "Username can only contain letters and numbers.";
+        $_SESSION['error'] = true;
+        header("Location: ../pages/loginpage.php");
+        exit;
+    }
+
     $query = "SELECT * FROM doctor WHERE username=?;";
     $statement = $conn->prepare($query);
 
     if ($statement) {
-        // Bind the username parameter and execute the query
+
         $statement->bind_param("s", $username);
         $statement->execute();
         $result = $statement->get_result();
 
-        // Check if a user with the provided username exists
+        // Account Check
         if ($result->num_rows === 1) {
             $row = $result->fetch_assoc();
 
-            // Verify if the provided password matches the hashed password
             if (password_verify($password, $row['password'])) {
-                // Password is correct, set session variables
                 $_SESSION['login'] = true;
                 $_SESSION['username'] = $row['username'];
                 $_SESSION['DocName'] = $row['DocName'];
                 $_SESSION['id'] = $row['id'];
 
-                // Redirect to the home page
                 header("Location: ../pages/home.php");
                 exit;
             } else {
-                // Password is incorrect, set error message
+                // Password is incorrect
                 $_SESSION["error_message"] = "Invalid username or password";
                 $_SESSION['error'] = true;
 
-                // Redirect back to the login page
                 header("Location: ../pages/loginpage.php");
                 exit;
             }
         } else {
-            // No user found with the provided username, set error message
+            // No user found 
             $_SESSION["error_message"] = "Invalid username or password";
             $_SESSION['error'] = true;
 
-            // Redirect back to the login page
             header("Location: ../pages/loginpage.php");
             exit;
         }
