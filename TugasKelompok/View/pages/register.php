@@ -56,7 +56,7 @@
                     array_push($errors, "Password doest not match");
                 }
 
-                require_once "../Utils/connection.php";
+                require_once "../../Controller/connection.php";
                 
                 // Check if the username already exists
                 $queryUsername = "SELECT * FROM doctor WHERE username = ?";
@@ -96,7 +96,7 @@
                         echo "<div class='alert alert-danger'>$error</div>";
                     }
                 } else {
-                    require_once "../Utils/connection.php";
+                    require_once "../../Controller/connection.php";
                     $sql = "INSERT INTO doctor (DocName, username, DocPhoneNumber, DocEmail, password) VALUES (?, ?, ?, ?, ?)";
                     $stmt = $conn->prepare($sql);
 

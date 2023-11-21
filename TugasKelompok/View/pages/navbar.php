@@ -18,7 +18,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Schedule</a>
                 </li>
-                <form action="logout.php" method="POST">
+                <form action="../../Controller//logout.php" method="POST">
                     <input type="submit" class="btn btn-outline-success m-0 logout-btn" value="Log out" name="logout">
                 </form>
             </ul>

@@ -1,5 +1,5 @@
 <?php
-    require "./logincheck.php";
+    require "../../Controller/logincheck.php";
 ?>
 
 <!DOCTYPE html>
