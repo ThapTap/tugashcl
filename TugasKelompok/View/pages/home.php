@@ -45,7 +45,8 @@
 
     <!-- placeholder !!!!! code buat show nama dokternya -->
     <script>
-        document.getElementById("welcome").innerText = "Hi! Welcome to MediLog";
+        var userName = "<?php echo $_SESSION['username']; ?>";
+        document.getElementById("welcome").innerText = "Hi, " + userName + "! Welcome to MediLog";
     </script>
 </body>
 </html>
