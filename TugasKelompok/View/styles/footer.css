@@ -1,0 +1,12 @@
+.bwh {
+    background-color: var(--ijo-tua);
+    width: 100%;
+    margin: 0%;
+    padding: 2px;
+    text-align: center;
+}
+
+.copyright {
+    padding: 2px;
+    margin: 4px;
+}

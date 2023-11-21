@@ -10,6 +10,16 @@
 
 
 <body>
+    <header class="container-nav">
+            <a href="index.html" class="logo">INILOGO</a>
+        <nav class="navbar">
+            <a href="index.html">HOME PAGE</a>
+            <a href="pasien.html">PASIEN</a>
+            <a href="#">SCHEDULE</a>
+            <a href="#">OBAT</a>
+        </nav>
+            <a class="logout" href="loginpage.html">LOG OUT</a>
+    </header>
     <img src="../assets/tuhanalek.jpg" class="profil-pasien" width="200px" height="200px" alt="foto-pasien">
     
 

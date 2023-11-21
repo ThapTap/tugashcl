@@ -1,23 +1,26 @@
 :root{
+    --putih: #FCFBF9;
     --ijo-tua: #96BCB4;
     --ijo-muda: #BBDCD3;
     --biru-link: #4B72C2;
     --sky-blue: #C9E7F2;
+    --hover: #76A3FF;
 }
 
 body{
     font-family:'Poppins', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 5%;
+    margin: 0;
     padding: 0;    
-    background-color: #BBDCD3;
+    background-color: var(--ijo-muda);
 }
 
 .content {
+    margin: 7.3%;
     text-align: center;
 }
 
 .patient {
-    margin: 5%;
+    margin: 15% 0% 0% 0%;
     padding: 2%;
 }
 
@@ -39,8 +42,8 @@ p {
 button {
     margin: 10px;
     padding: 10px 20px;
-    background-color: #4B72C2;
-    color: #FCFBF9;
+    background-color: var(--biru-link);
+    color: var(--putih);
     font-size: 12px;
     font-family: 'Inter', sans-serif;
     cursor: pointer;
@@ -48,30 +51,35 @@ button {
     border: none;
 }
 
+button:hover {
+    background-color: var(--hover);
+    color: black;
+}
+
 .star1 {
     position: absolute;
-    top: 140px;
-    left: 1200px;
+    top: 130px;
+    left: 900px;
     width: 50px;
 }
 
 .star2 {
     position: absolute;
-    top: 290px;
-    left: 670px;
+    top: 280px;
+    left: 550px;
     width: 20px;
 }
 
 .star3 {
     position: absolute;
-    top: 520px;
-    left: 840px;
+    top: 438px;
+    left: 702px;
     width: 20px;
 }
 
 .star4 {
     position: absolute;
-    top: 400px;
+    top: 430px;
     left: 300px;
     width: 70px;
 }
