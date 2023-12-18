@@ -1,67 +1,72 @@
 <?php
-    require "../../Controller/logincheck.php";
+require "../../Controller/logincheck.php";
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PASIEN</title>
+    <title>List Pasien</title>
 
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- STYLES -->
-    <link rel="stylesheet" href="../styles/pasien.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="../styles/navbar.css">  
+    <link rel="stylesheet" href="../styles/navbar.css">
+    <link rel="stylesheet" href="../styles/pasien.css">
 </head>
 
 
 <body>
     <?php
-        require "./navbar.php";
+    require "./navbar.php";
     ?>
-    
 
-    <div class="container-patient">
-
-        <div class="title-column">
-            <span>No.</span>
-            <span>First Name</span>
-            <span>Last Name</span>
-            <span>Disease</span>
-            <span>Last Measurement</span>
-            <span>Last Visit</span>
-            <span>Action</span>
-        </div>
-    
-        <div class="content-column">
-            <span>1.</span>
-            <span>John</span>
-            <span>Doe</span>
-            <span>Malaria</span>
-            <span>11/92</span>
-            <span>60 Day(s) Ago</span>
-            <span a href="#">Details</span>
-        </div>
-
-        <div class="content-column2">
-            <span>2.</span>
-            <span>RANJAG</span>
-            <span>ONOWARP</span>
-            <span>FLU KUDA</span>
-            <span>9/11</span>
-            <span>1 Day(s) Ago</span>
-            <span a href="#">Details</span>
-        </div>
-
-        <div class="content-column3">
-            <span>3.</span>
-            <span>Uchiha</span>
-            <span>NARBIG</span>
-            <span>Healthy</span>
-            <span>12/12</span>
-            <span>15 Day(s) Ago</span>
-            <span a href="#">Details</span>
+    <div class="title">
+        <h1>See your patients list</h1>
+        <div>
+            <a class="btn btn-primary my-auto add-medrec" href="./addMedRec.php">Add new medical record</a>
+            <a class="btn btn-primary my-auto add-pasien" href="./addPasien.php">Add new patient</a>
         </div>
     </div>
+
+    <div class="container-patient">
+        <table class="table table-success table-striped table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Full Name</th>
+                    <th scope="col">Disease</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                $_SESSION['add-error'] = NULL;
+                $i = 1;
+                require "../../Controller/connection.php";
+
+                $query = "SELECT ID, Name, Disease
+                FROM patients
+                WHERE DoctorID = {$_SESSION['id']};";
+                $stmt = $conn->prepare($query);
+                $stmt->execute();
+                $result = $stmt->get_result();
+                $conn->close();
+
+                foreach ($result as $i => $patient) {
+                    $i++;
+
+                    echo '<tr>';
+                    echo '<td>' . $i . '</td>';
+                    echo '<td>' . $patient['Name'] . '</td>';
+                    echo '<td>' . $patient['Disease'] . '</td>';
+                    echo '<td><a class="btn btn-primary detail" href="">Details</a></td>';
+                    echo '</tr>';
+                }
+                ?>
+            </tbody>
+        </table>
+
+    </div>
+</body>

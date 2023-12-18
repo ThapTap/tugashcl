@@ -12,6 +12,7 @@ body{
     margin: 0;
     padding: 0;    
     background-color: var(--ijo-muda);
+    min-height: fit-content
 }
 
 .content {
@@ -39,7 +40,7 @@ p {
     font-size: 1rem;
 }
 
-button {
+.a {
     margin: 10px;
     padding: 10px 20px;
     background-color: var(--biru-link);
@@ -49,11 +50,16 @@ button {
     cursor: pointer;
     border-radius: 50px;
     border: none;
+    text-decoration: none;
 }
 
-button:hover {
+.a:hover {
     background-color: var(--hover);
     color: black;
+}
+
+.patient a {
+    text-decoration: none;
 }
 
 .star1 {

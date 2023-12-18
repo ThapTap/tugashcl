@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
                 $_SESSION['login'] = true;
                 $_SESSION['username'] = $row['username'];
                 $_SESSION['DocName'] = $row['DocName'];
-                $_SESSION['id'] = $row['id'];
+                $_SESSION['id'] = $row['ID'];
 
                 header("Location: ../View/pages/home.php");
                 exit;
