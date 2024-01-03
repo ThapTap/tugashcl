@@ -1,0 +1,42 @@
+:root{
+    --ijo-tua: #96BCB4;
+    --ijo-muda: #BBDCD3;
+    --biru-link: #4B72C2;
+    --sky-blue: #C9E7F2;
+}
+
+/* NAVBAR */
+nav{
+    position: absolute;
+    top: 0px;
+    z-index: 10;
+}
+.navbar-wrapper{
+    background-color: var(--ijo-tua);
+    top: 0px;
+    left: 0px;
+}
+.img-logo-wrapper{
+    width: 175px;
+    margin: 12px 24px;
+}
+.img-logo{
+    width: 100%;
+}
+.nav-item{
+    font-size: 20px;
+    margin: 0px 24px;
+}
+.nav-item>a{
+    color: black;
+}
+.nav-item>a:hover{
+    color: white;
+    transition: 0.3s;
+}
+.search-field{
+    width: 512px;
+    height: 46px;
+    background-color: var(--sky-blue);
+    border: none;
+}

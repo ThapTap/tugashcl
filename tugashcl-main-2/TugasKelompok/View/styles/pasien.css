@@ -1,0 +1,51 @@
+:root{
+    --ijo-tua: #96BCB4;
+    --ijo-muda: #BBDCD3;
+    --biru-link: #4B72C2;
+    --sky-blue: #C9E7F2;
+    --biru-abu: #91ACCB;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-color: var(--ijo-muda);
+}
+
+.title{
+    margin-top: 75px;
+    padding: 0px 30px;
+    display: flex;
+    justify-content: space-between;
+    position: relative
+}
+
+.title::after{
+    content: '';
+    display: block;
+    width: 96%;
+    height: 2px;
+    position: absolute;
+    top: 100%;
+    left: 30px;
+    background-color: black;
+}
+
+
+.title h1{
+    font-size: 24px;
+}
+
+.container-patient{
+    padding: 0px 30px;
+    margin-top: 32px;
+}
+
+.detail, .add-medrec, .add-pasien{
+    padding: 0px 12px;
+}

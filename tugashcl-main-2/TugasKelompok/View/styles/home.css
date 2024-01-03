@@ -1,0 +1,91 @@
+:root{
+    --putih: #FCFBF9;
+    --ijo-tua: #96BCB4;
+    --ijo-muda: #BBDCD3;
+    --biru-link: #4B72C2;
+    --sky-blue: #C9E7F2;
+    --hover: #76A3FF;
+}
+
+body{
+    font-family:'Poppins', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;    
+    background-color: var(--ijo-muda);
+    min-height: fit-content
+}
+
+.content {
+    margin: 7.3%;
+    text-align: center;
+}
+
+.patient {
+    margin: 15% 0% 0% 0%;
+    padding: 2%;
+}
+
+.schedule {
+    margin: 0%;
+    padding: 0%;
+}
+
+h1 {
+    font-weight: bold;
+    /* font-size: 2rem; */
+}
+
+p {
+    font-weight: 500; /* medium */
+    font-size: 1rem;
+}
+
+.a {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: var(--biru-link);
+    color: var(--putih);
+    font-size: 12px;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    border-radius: 50px;
+    border: none;
+    text-decoration: none;
+}
+
+.a:hover {
+    background-color: var(--hover);
+    color: black;
+}
+
+.patient a {
+    text-decoration: none;
+}
+
+.star1 {
+    position: absolute;
+    top: 130px;
+    left: 900px;
+    width: 50px;
+}
+
+.star2 {
+    position: absolute;
+    top: 280px;
+    left: 550px;
+    width: 20px;
+}
+
+.star3 {
+    position: absolute;
+    top: 438px;
+    left: 702px;
+    width: 20px;
+}
+
+.star4 {
+    position: absolute;
+    top: 430px;
+    left: 300px;
+    width: 70px;
+}
