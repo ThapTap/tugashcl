@@ -25,7 +25,6 @@ require "../../Controller/logincheck.php";
     <div class="title">
         <h1>See your patients list</h1>
         <div>
-            <a class="btn btn-primary my-auto add-medrec" href="./addMedRec.php">Add new medical record</a>
             <a class="btn btn-primary my-auto add-pasien" href="./addPasien.php">Add new patient</a>
         </div>
     </div>
@@ -56,12 +55,14 @@ require "../../Controller/logincheck.php";
 
                 foreach ($result as $i => $patient) {
                     $i++;
-
+                    $token = bin2hex(random_bytes(16)); 
+                    $_SESSION['patient_tokens'][$token] = $patient['ID']; 
+                
                     echo '<tr>';
                     echo '<td>' . $i . '</td>';
                     echo '<td>' . $patient['Name'] . '</td>';
                     echo '<td>' . $patient['Disease'] . '</td>';
-                    echo '<td><a class="btn btn-primary detail" href="">Details</a></td>';
+                    echo '<td><a class="btn btn-primary detail" href="patient_records.php?token=' . $token . '">Details</a></td>';
                     echo '</tr>';
                 }
                 ?>

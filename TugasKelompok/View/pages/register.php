@@ -48,8 +48,10 @@
                     array_push($errors, "Email is not valid");
                 }
 
-                if (strlen($password) < 8){
+                if (strlen($password) < 8) {
                     array_push($errors, "Password must be at least 8 characters long");
+                } elseif (strlen($password) > 20) {
+                    array_push($errors, "Password must not exceed 20 characters");
                 }
 
                 if ($password!=$confirmPassword) {
