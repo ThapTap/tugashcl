@@ -1,5 +1,6 @@
 <?php
 session_start();
+require 'config.php';
 require "../Controller/connection.php";
 
 function checkString($input, $string)

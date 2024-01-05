@@ -7,10 +7,10 @@ if (isset($_GET['token'])) {
     if (isset($_SESSION['patient_tokens'][$token])) {
         $patient_id = $_SESSION['patient_tokens'][$token]; // Retrieve the actual patient ID using the token
     } else {
-        die('Invalid access token.'); // Or handle the error as appropriate
+        die('Invalid access token.'); 
     }
 } else {
-    die('No patient specified.'); // Or redirect to a default page
+    die('No patient specified.'); 
 }
 ?>
 

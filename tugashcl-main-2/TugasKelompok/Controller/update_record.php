@@ -1,5 +1,6 @@
 <?php
 session_start();
+require 'config.php';
 
 if (isset($_POST['submit'])) {
     $servername = "localhost";
@@ -40,27 +41,26 @@ if (isset($_POST['submit'])) {
 
     $Date = $_POST['Date'];
 
-    // Validate heartRate (format "210/75")
+    // Validate heartRate
     if (!preg_match("/^\d+\/\d+$/", $heartRate)) {
         $errors[] = 'Invalid Heart Rate format. Expected format: 210/75';
     }
 
-    // Validate Weight (non-negative decimal number)
+    // Validate Weight 
     if (!filter_var($Weight, FILTER_VALIDATE_FLOAT) || $Weight < 0) {
         $errors[] = 'Invalid Weight';
     }
 
-    // Validate Diagnosis (non-empty)
+    // Validate Diagnosis 
     if (empty($Diagnosis)) {
         $errors[] = 'Diagnosis cannot be empty';
     }
 
-    // Validate Prescription (non-empty)
+    // Validate Prescription 
     if (empty($Prescription)) {
         $errors[] = 'Prescription cannot be empty';
     }
 
-    // If there are errors, don't proceed with database operation
     if (!empty($errors)) {
         foreach ($errors as $error) {
             echo $error . '<br>';
@@ -77,7 +77,6 @@ if (isset($_POST['submit'])) {
             $new_token = bin2hex(random_bytes(16));
             $_SESSION['patient_tokens'][$new_token] = $PatientID;
         
-            // Redirect to patient_records.php using the token
             header('Location: ../View/pages/patient_records.php?token=' . urlencode($new_token));
             exit();
         }  else {

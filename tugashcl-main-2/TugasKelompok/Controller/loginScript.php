@@ -1,5 +1,6 @@
 <?php
 session_start();
+require 'config.php';
 require "./connection.php";
 
 
@@ -28,10 +29,15 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
             $row = $result->fetch_assoc();
 
             if (password_verify($password, $row['password'])) {
+                session_regenerate_id(true);
                 $_SESSION['login'] = true;
                 $_SESSION['username'] = $row['username'];
                 $_SESSION['DocName'] = $row['DocName'];
                 $_SESSION['id'] = $row['ID'];
+
+                // Bind the session to the user's IP and User-Agent
+                $_SESSION['user_ip'] = $_SERVER['REMOTE_ADDR'];
+                $_SESSION['user_agent'] = $_SERVER['HTTP_USER_AGENT'];
 
                 header("Location: ../View/pages/home.php");
                 exit;
